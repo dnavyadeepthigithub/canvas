@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        let canvas = document.querySelector("canvas");
+let c= canvas.getContext("2d");
+canvas.width = 1000;
+canvas.height=500;
+c.font = "30px Arial";
+
+//SQUARE
+
+c.fillStyle="red";
+c.strokeStyle="red";
+c.lineWidth="4"
+c.fillText("Square",60,60);
+c.moveTo(20,80);
+c.lineTo(220,80);
+c.lineTo(220,280);
+c.lineTo(20,280);
+c.lineTo(20,80);
+c.stroke();
+
+//Rectangle
+
+c.fillText("Rectangle",360,60);
+c.fillRect(320,80,200,100);
+c.stroke();
+
+//Circle
+
+c.fillText("circle",680,60);
+c.beginPath();
+c.arc(720,160,80,0,2*Math.PI);
+c.stroke();
+    </script>
+</body>
+</html>
